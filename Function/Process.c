@@ -1,5 +1,5 @@
 #include <stdio.h>
-int num1, num2;
+float num1, num2;
 char a;
 
 int plus()
@@ -22,7 +22,7 @@ int power()
 }
 double divide()
 {
-    int sum;
+    double sum;
     sum = num1 / num2;
     return sum;
 }
@@ -33,24 +33,24 @@ void main()
     scanf("%d", &num1);
     printf("Enter Process : ");
     scanf("%s", &a);
-    printf("ENter number: ");
+    printf("Enter number: ");
     scanf("%d", &num2);
     switch (a)
     {
-    case '+' :
-        printf("total : %d ",plus(num1,num2));
+    case '+':
+        printf("total : %.2f ", plus(num1, num2));
         break;
-    case '-' :
+    case '-':
         decrement(num1, num2);
-        printf("total : %d",decrement(num1,num2));
+        printf("total : %.2f", decrement(num1, num2));
         break;
-    case '*' :
+    case '*':
         power(num1, num2);
-        printf("total : %d",power(num1,num2));
+        printf("total : %.2f", power(num1, num2));
         break;
     case '/':
         divide(num1, num2);
-        printf("total : %.2f",divide(num1,num2));
+        printf("total : %.2f", divide(num1, num2));
         break;
     default:
         printf("ERROR!!");
