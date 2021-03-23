@@ -9,15 +9,26 @@ int main()
         char surname[10];
         int age;
     };
+    struct classroom
+    {
+        char name[10];
+        char class[10];
+        struct student std;
+    };
+    
     //2//
-    struct student std;
+    struct classroom clr;
     //3//
-    strcpy(std.name, "Wannachol");
-    strcpy(std.surname, "Pinprom");
-    std.age = 19;
+    strcpy(clr.name, "CED");
+    strcpy(clr.class, "Year 1");
+    strcpy(clr.std.name, "Wannachol");
+    strcpy(clr.std.surname, "Pinprom");
+    clr.std.age = 19;
     //4//
-    printf("Name : %s %s\n", std.name, std.surname);
-    printf("AGE : %d", std.age);
+    printf("Class Name : %s\n", clr.name);
+    printf("Level : %s\n", clr.class);
+    printf("Name : %s %s\n", clr.std.name, clr.std.surname);
+    printf("AGE : %d Years old", clr.std.age);
 
     return 0;
 }
